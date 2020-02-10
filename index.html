@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+   
+    <meta name="application-name" content="Siddharth">
+    <meta name="theme-color" content="#2B454E">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="author" href="humans.txt">
+
+    <!-- Favicons -->
+    <link rel="icon" sizes="192x192" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="mask-icon" href="favicon.svg" color="#2B454E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <title>Siddharth - Frontend Web Developer</title>
+    <meta name="description" content="Designer and web developer frontend. Want to know more about me? Go on my website and discover everything I can do for you. :)">
+
+    <!-- Facebook Share -->
+    <meta property="og:url" content="https://Siddharthgithub.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Siddharth - Frontend Web Developer" />
+    <meta property="og:description" content="Designer and web developer frontend. Want to know more about me? Go on my website and discover everything I can do for you. :)" />
+    
+
+  
+   
+    <style>
+            #loading {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                position: fixed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #02A3D6;
+                z-index: 99;
+            }  
+            #loading.loaded {
+                display: none;
+            }
+            .points span{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                background-color: #fafafa;
+                margin: 35px 5px;
+            }
+    
+            .points span:nth-child(1){
+                animation: loading 1s ease-in-out infinite;
+            }
+    
+            .points span:nth-child(2){
+                animation: loading 1s ease-in-out 0.33s infinite;
+            }
+    
+            .points span:nth-child(3){
+                animation: loading 1s ease-in-out 0.66s infinite;
+            }
+    
+            @keyframes loading{
+                0%, 75%, 100%{
+                    -webkit-transform: translateY(0);
+                    -ms-transform: translateY(0);
+                    -o-transform: translateY(0);
+                    transform: translateY(0);
+                }
+    
+                25%{
+                    -webkit-transform: translateY(-20px);
+                    -ms-transform: translateY(-20px);
+                    -o-transform: translateY(-20px);
+                    transform: translateY(-20px);
+                }
+            }
+        </style>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loading">
+        <div class="points">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav class="burguer-nav">
+        <a class="nav-button">
+            <div class="button-content"></div>
+        </a>
+
+        <div class="options">
+            <div class="links">
+                <a href="javascript:;" class="nav-link" data-item="header">
+                    <span class="number">0</span>
+                    <span class="title">HOME</span>
+                </a>
+                <a href="javascript:;" class="nav-link" data-item="aboutme">
+                    <span class="number">1</span>
+                    <span class="title">ABOUT ME</span>
+                </a>
+                <a href="javascript:;" class="nav-link" data-item="skills">
+                    <span class="number">2</span>
+                    <span class="title">SKILLS</span>
+                </a>
+               
+                <a href="javascript:;" class="nav-link" data-item="portfolio">
+                    <span class="number">4</span>
+                    <span class="title">PORTFOLIO</span>
+                </a>
+                
+                <a href="javascript:;" class="nav-link" data-item="blog">
+                    <span class="number">6</span>
+                    <span class="title">BLOG</span>
+                </a>
+                <a href="javascript:;" class="nav-link" data-item="contact">
+                    <span class="number">7</span>
+                    <span class="title">CONTACTO</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Desktop nav -->
+    <nav class="main-nav">
+        <a href="javascript:;" class="nav-link" data-item="header">
+            <span class="nav-text">HOME</span>
+            <span class="nav-dot"></span>
+        </a>
+        <a href="javascript:;" class="nav-link" data-item="aboutme">
+            <span class="nav-text">ABOUT ME</span>
+            <span class="nav-dot"></span>
+        </a>
+        <a href="javascript:;" class="nav-link" data-item="skills">
+            <span class="nav-text">SKILLS</span>
+            <span class="nav-dot"></span>
+        </a>
+        
+        <a href="javascript:;" class="nav-link" data-item="portfolio">
+            <span class="nav-text">PORTFOLIO</span>
+            <span class="nav-dot"></span>
+        </a>
+       
+        <a href="javascript:;" class="nav-link" data-item="blog">
+            <span class="nav-text">BLOG</span>
+            <span class="nav-dot"></span>
+        </a>
+        <a href="javascript:;" class="nav-link" data-item="contact">
+            <span class="nav-text">CONTACTO</span>
+            <span class="nav-dot"></span>
+        </a>
+
+    </nav>
+    <!-- Display the gradient backgrund when the heder section is in the viewport -->
+    <div class="background"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header Section -->
+        <header class="section header light" id="header">
+            <div class="illustration-bg"></div>
+            <h1>
+                <span class="hi">Hello!</span>
+                <span class="my-name-is"> My name is</span>
+                <span class="name">SIDDHARTH</span>
+                <span class="and"> And I'm</span>
+                <span class="job">Frontend Developer</span>
+            </h1>
+
+            <div class="scroll">
+                <p class="info-scroll">Scroll to learn more about me</p>
+                <img src="img/down-arrow.svg" alt="Fecha apuntando hacia abajo">
+            </div>
+        </header>
+
+        <!-- About Me -->
+        <section class="section about-me" id="aboutme">
+            <div class="illustration-bg" data-speed="20" data-parent-section="header"></div>
+            <div class="title">
+                <p class="number">01</p>
+                <p class="subtitule">CONCEME</p>
+                <h2>About me</h2>
+            </div>
+
+            <div class="content">
+                <p>My name is <strong>SIDDHARTH</strong>, I am 20 years old and I was born in kanpur,</p>
+
+                <p>I'm <strong>designer</strong> and <strong>frontend web developer</strong>  in Web Application Development and Cross-Platform Application Development.</p><p> I have real <strong>passion</strong> for everything that has to do with <strong>technology</strong> and <strong>design</strong> (in addition to <strong>games</strong> and <strong>photography</strong>!), which makes <strong> enjoyment</strong> of every work. From website design and development, logo design, corporate image, to training courses. <strong> I love this sector</strong>, and for me each project is a new <strong>reto</strong> that I face with great <strong>enthusiasm</strong>, involving me to the maximum to give the best of me, based on my experience and with a more transversal vision, without losing sight of the end user and looking for the most <strong>innovative solution</strong>.</p>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="section skills light" id="skills">
+            <div class="illustration-bg" data-speed="20" data-parent-section="aboutme"></div>
+            <div class="title">
+                <p class="number">02</p>
+                <p class="subtitule">SKILLS</p>
+                <h2>What work</h2>
+            </div>
+
+            <div class="content">
+                <p>  I have knowledge in <strong> web development</strong> with<strong> HTML5, CSS3 and JavaScript</strong>, and I have knowledge in<strong> PHP, Python, MySQL,  Git, </strong>. I also have   knowledge <strong>graphic design</strong> (logos, posters, etc.). As you can see, I've touched a little bit of everything, but it was the <strong>Frontend</strong> that I liked the most, and where I've settled my way, </p>
+
+                <div class="skills-icons">
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/html5.svg" alt="Logotipo de HTML5 en color" class="color">
+                            <img src="img/skills/html5.svg" alt="Logotipo de HTML5 en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/css3.svg" alt="Logotipo de CSS3 en color" class="color">
+                            <img src="img/skills/css3.svg" alt="Logotipo de CSS3 en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/js.svg" alt="Logotipo de JavaScript en color" class="color">
+                            <img src="img/skills/js.svg" alt="Logotipo de JavaScript en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/git.svg" alt="Logotipo de Git en color" class="color">
+                            <img src="img/skills/git.svg" alt="Logotipo de Git en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/sass.svg" alt=" SASS" class="color">
+                            <img src="img/skills/sass.svg" alt=" SASS " class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/wordpress.svg" alt=" WordPress " class="color">
+                            <img src="img/skills/wordpress.svg" alt=" WordPress" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/vscode.svg" alt="vscode" class="color">
+                            <img src="img/skills/visual.png" alt="vscode" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/python.svg" alt="python" class="color">
+                            <img src="img/skills/python.png" alt="python" class="white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        
+
+        <!--PORTFOLIO SECTION -->
+        <section class="section portfolio" id="portfolio">
+            <div class="illustration-bg" data-speed="20" data-parent-section="timeline"></div>
+            <div class="title">
+                <p class="number">04</p>
+                <p class="subtitule">PORTFOLIO</p>
+                <h2>My Works</h2>
+            </div>
+
+            <div class="content">
+                <div class="portfolio-gallery">
+                    <div class="navigation">
+                        <ul>
+                            <li class="todo active" data-filter="all"><a href="javascript:;">All</a></li>
+                            <li class="web" data-filter=".category-web"><a href="javascript:;">Python</a></li>
+                            <li class="diseno" data-filter=".category-design"><a href="javascript:;">Web</a></li>
+                            <hr class="hover" />
+                            <hr class="line-active"/>
+                        </ul>
+                    </div>
+                    <div class="elements">
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="valmar">
+                            <img class="lazy" data-sizes="width: 100%; height: auto;" data-src="img/portfolio/my/py.png" alt="Mockup de la Web de Valmar">
+                            <div class="label">
+                                <p class="title">Encryption_and_Decrpyption tool with Python</p>
+                                
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-design" data-item="valverde">
+                            <img class="lazy" data-sizes="width: 100%; height: auto;" data-src="img/portfolio/my/speechtotext.png" alt="Mockup del diseño de un cartel realizado a Centros de Estudio Valverde">
+                            <div class="label">
+                                <p class="title">Speech-to-text</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="vicenteortiz">
+                            <img class="lazy" data-sizes="width: 100%; height: auto;" data-src="img/portfolio/my/notepad.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress, realizado a Vicente Ortiz Abogados">
+                            <div class="label">
+                                <p class="title">Notepad with python</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-design" data-item="webappdesign">
+                            <img class="lazy" data-sizes="width: 100%; height: auto;" data-src="img/portfolio/my/codepad.png" alt="Mockup de un flyer publicitario diseñado para Web App Design">
+                            <div class="label">
+                                <p class="title">HTML CODE editer</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="dungeon">
+                            <img class="lazy" data-sizes="width: 100%; height: auto;" data-src="img/portfolio/my/web.jpg" alt="Mockup de la interfaz de un videojuego para Android y Web">
+                            <div class="label">
+                                <p class="title">Website</p>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!--BLOG SECTION -->
+        <section class="section blog" id="blog">
+            <div class="illustration-bg" data-speed="20" data-parent-section="yunemy"></div>
+            <div class="title">
+                <p class="number">06</p>
+                <p class="subtitule">BLOG</p>
+                <h2>I also write </h2>
+            </div>
+
+            <div class="content">
+                 <p>Yes, <strong>I like to write</strong>: tell experiences, share something I know or have learned, etc. It's a good way <strong>communicate</strong> with the rest of the world and contribute my grain of sand. I invite you to <strong>readas</strong> any of my <strong>articles</strong> (or those of <strong>Blogger</strong> or those on the <strong>Web App Design</strong> blog. If you have any suggestions or suggestions do not hesitate to let me know!</p>
+
+                <a href="https://lenskill.blogspot.com/search/label/programming/" class="button" target="_blank" rel="noreferrer">VISIT MY BLOG </a>
+
+              
+            </div>
+        </section>
+
+        <!--CONTACT SECTION -->
+        <footer class="section contact light" id="contact">
+            <div class="illustration-bg" data-speed="20" data-parent-section="blog"></div>
+            <div class="title">
+                <p class="number">07</p>
+                <p class="subtitule">CONTACTO</p>
+                <h2>Talk?</h2>
+            </div>
+
+            <div class="content">
+                <p>You want to see how I work? If you are looking for a frontend, a designer, or just want to get to know me more, contact me and I will be happy to talk to you.</strong>.</p>
+
+                <div class="social-icons">
+                    <a href="mailto:techchip18021999@gmail.com" target="_blank" rel="noreferrer" class="icon-contact email"><img class="svg" src="img/rrss/email.svg" alt="Icono de email"></a>
+                    <a href="https://codepen.io/siddharth-/" target="_blank" rel="noreferrer" class="icon-contact codepen"><img class="svg" src="img/rrss/codepen.svg" alt="Icono de codepen"></a>
+                    <a href="https://github.com/siddharth6" target="_blank" rel="noreferrer" class="icon-contact github"><img class="svg" src="img/rrss/github.svg" alt="Icono de GitHub"></a>
+                   
+                </div>
+
+                <p class="credits">Designed and  <img src="img/rrss/heart.svg" alt="Icono de corazón" class="svg">SIDDHARTH</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="portfolio-modal-container">
+        <div class="modal" id="valmar">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_valmar_1" checked />
+                    <input type="radio" name="slides" id="slides_valmar_2" />
+                    <input type="radio" name="slides" id="slides_valmar_3" />
+                    <input type="radio" name="slides" id="slides_valmar_4" />
+                    <ul>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/py.png" alt="Mockup de un sitio web diseñado y desarrollado con WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/py.png" alt="Mockup de un sitio web diseñado y desarrollado con WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/py.png" alt="Mockup de un sitio web diseñado y desarrollado con WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/py.png" alt="Mockup de un sitio web diseñado y desarrollado con WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_valmar_1"></label>
+                        <label for="slides_valmar_2"></label>
+                        <label for="slides_valmar_3"></label>
+                        <label for="slides_valmar_4"></label>
+                        <label for="slides_valmar_1" class="goto-first"></label>
+                        <label for="slides_valmar_4" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_valmar_1"></label>
+                            <label for="slides_valmar_2"></label>
+                            <label for="slides_valmar_3"></label>
+                            <label for="slides_valmar_4"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        
+                        <h3>Encryption_and_Decrpyption tool with Python</h3>
+                    </div>
+                    <div class="main-info">
+                        <div class="tags">
+                            <span>#Desktop App</span>
+                            <span>#Python</span>
+                           
+                        </div>
+                        <div class="description">
+                           <p>This is my personal project which is bulid in<strong> python</strong>, it is a desktop application.</p>
+                        </div>
+                    </div>
+                </div>
+                
+              
+            </div>
+        </div>
+
+        <div class="modal" id="valverde">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_valverde_1" checked />
+                    <input type="radio" name="slides" id="slides_valverde_2" />
+                    <input type="radio" name="slides" id="slides_valverde_3" />
+                    <input type="radio" name="slides" id="slides_valverde_4" />
+                    <input type="radio" name="slides" id="slides_valverde_5" />
+                    <ul>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/speechtotext.png" alt="Mockup del diseño de un cartel publicitario" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/speechtotext.png" alt="Mockup del diseño de un cartel publicitario" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/speechtotext.png" alt="Mockup del diseño de un cartel publicitario" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/speechtotext.png" alt="Mockup del diseño de un cartel publicitario" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/speechtotext.png" alt="Mockup del diseño de un cartel publicitario" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_valverde_1"></label>
+                        <label for="slides_valverde_2"></label>
+                        <label for="slides_valverde_3"></label>
+                        <label for="slides_valverde_4"></label>
+                        <label for="slides_valverde_5"></label>
+                        <label for="slides_valverde_1" class="goto-first"></label>
+                        <label for="slides_valverde_5" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_valverde_1"></label>
+                            <label for="slides_valverde_2"></label>
+                            <label for="slides_valverde_3"></label>
+                            <label for="slides_valverde_4"></label>
+                            <label for="slides_valverde_5"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        
+                        <h3>Speech-to-text</h3>
+                    </div>
+                    <div class="main-info">
+                        <div class="tags">
+                            <span>#Python</span>
+                            <span>#pyaudio</span>
+                            <span>#Speech-to-text</span>
+                        </div>
+                        <div class="description">
+                            <p>This is my personal project which is bulid in<strong> python</strong>and , it is a CLI mode application.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="vicenteortiz">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_vicenteortiz_1" checked />
+                    <input type="radio" name="slides" id="slides_vicenteortiz_2" />
+                    <input type="radio" name="slides" id="slides_vicenteortiz_3" />
+                    <input type="radio" name="slides" id="slides_vicenteortiz_4" />
+                    <input type="radio" name="slides" id="slides_vicenteortiz_5" />
+                    <ul>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/notepad.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/notepad.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/notepad.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/notepad.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/notepad.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_vicenteortiz_1"></label>
+                        <label for="slides_vicenteortiz_2"></label>
+                        <label for="slides_vicenteortiz_3"></label>
+                        <label for="slides_vicenteortiz_4"></label>
+                        <label for="slides_vicenteortiz_5"></label>
+                        <label for="slides_vicenteortiz_1" class="goto-first"></label>
+                        <label for="slides_vicenteortiz_5" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_vicenteortiz_1"></label>
+                            <label for="slides_vicenteortiz_2"></label>
+                            <label for="slides_vicenteortiz_3"></label>
+                            <label for="slides_vicenteortiz_4"></label>
+                            <label for="slides_vicenteortiz_5"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        
+                        <h3>Notepad</h3>
+                    </div>
+                    <div class="main-info">
+                        <div class="tags">
+                            <span>#notepad</span>
+                            <span>#python</span>
+                            <span>#Tkinter</span>
+                            
+                        </div>
+                        <div class="description">
+                            <p>This is my personal project which is bulid in<strong> python</strong>, it is a desktop application.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="webappdesign">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_webappdesign_1" checked />
+                    <input type="radio" name="slides" id="slides_webappdesign_2" />
+                    <ul>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/codepad.png" alt="Mockup del disñeo de un flyer publicitario, en el que se anuncian cursos de WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/codepad.png" alt="Mockup del disñeo de un flyer publicitario, en el que se anuncian cursos de WordPress" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_webappdesign_1"></label>
+                        <label for="slides_webappdesign_2"></label>
+                        <label for="slides_webappdesign_1" class="goto-first"></label>
+                        <label for="slides_webappdesign_2" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_webappdesign_1"></label>
+                            <label for="slides_webappdesign_2"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">WEB APP DESIGN</p>
+                        <h3>HTML CODE Editer</h3>
+                    </div>
+                    <div class="main-info">
+                        <div class="tags">
+                            <span>#HTML</span>
+                            <span>#CSS</span>
+                            <span>#JAVASCRIPT</span>
+                        </div>
+                        <div class="description">
+                            <p>This is my personal project which is bulid in<strong>HTML , CSS , JavaScript</strong>, it is a web application.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="dungeon">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_dungeon_1" checked />
+                    <input type="radio" name="slides" id="slides_dungeon_2" />
+                    <ul>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/web.jpg" alt="Mockup de un videojuego realizado para Android, con una versión web" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/my/web.jpg" alt="Mockup de un videojuego realizado para Android, con una versión web" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_dungeon_1"></label>
+                        <label for="slides_dungeon_2"></label>
+                        <label for="slides_dungeon_1" class="goto-first"></label>
+                        <label for="slides_dungeon_2" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_dungeon_1"></label>
+                            <label for="slides_dungeon_2"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        
+                        <h3>website design</h3>
+                    </div>
+                    <div class="main-info">
+                        <div class="tags">
+                            
+                            <span>#html</span>
+                            <span>#css</span>
+                            <span>#javascript</span>
+                            <span>#php</span>
+                            
+                            <span>#photoshop</span>
+                        </div>
+                        <div class="description">
+                            <p>This is my personal project which is bulid in<strong> google materialize css , html , jquery</strong>, it is a website.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    <noscript>
+        <link rel="stylesheet" href="css/vendor/animate.min.css">
+        <link rel="stylesheet" href="css/vendor/slider.min.css">
+    </noscript>
+    
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.15.0/lazyload.min.js"></script>
+
+    <script>
+        window.onload = function() {
+            var myLazyLoad = new LazyLoad({
+                elements_selector: ".lazy"
+            });
+        };
+    </script>
+    
+    
+    <script src="js/vendor/scrollreveal.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/vendor/particles.min.js"></script>
+    <script src="js/vendor/mixitup.min.js"></script>
+</body>
+</html>
+
+<!-- CSS Lazy Load -->
+<script type="text/javascript">
+    /* First CSS File */
+    var giftofspeed = document.createElement('link');
+    giftofspeed.rel = 'stylesheet';
+    giftofspeed.href = 'css/vendor/animate.min.css';
+    giftofspeed.type = 'text/css';
+    var godefer = document.getElementsByTagName('link')[0];
+    godefer.parentNode.insertBefore(giftofspeed, godefer);
+    
+    /* Second CSS File */
+    var giftofspeed2 = document.createElement('link');
+    giftofspeed2.rel = 'stylesheet';
+    giftofspeed2.href = 'css/vendor/slider.min.css';
+    giftofspeed2.type = 'text/css';
+    var godefer2 = document.getElementsByTagName('link')[0];
+    godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+    </script>

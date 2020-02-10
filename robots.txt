@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://siddharth6.github.io/
